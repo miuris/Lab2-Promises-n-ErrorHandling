@@ -10,24 +10,24 @@ fetchProductCatalog()
             console.log(`Product ID: ${product.id}, Name: ${product.name}`);
 
             fetchProductReviews(product.id)
-            .then(reviews => {
-                console.log("Reviews for," + "product.name")
-            })
-            .catch(error => {
-                console.error(`Error fetching reviews for ${product.name}:`, error);
-            });
+                .then(reviews => {
+                    console.log("Reviews for," + "product.name")
+                })
+                .catch(error => {
+                    console.error(`Error fetching reviews for ${product.name}:`, error);
+                });
 
-              fetchSalesReport()
-            .then(reviews => {
-                console.log("Here is the Sales Report:", report);
-            })
-            .catch(error => {
-                console.error("Error fetching the Sales Report:", error);
+            fetchSalesReport()
+                .then(reviews => {
+                    console.log("Here is the Sales Report:", reviews);
+                })
+                .catch(error => {
+                    console.error("Error fetching the Sales Report:", error);
+                });
         });
-});
-     .catch(error => { 
-        console.error("Error occurred:", error);
-});
+     .catch(error => {
+            console.error("Error:", error);
+        });
 
 
 /* Part 3: Build the Main Application Logic
